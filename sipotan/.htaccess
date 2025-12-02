@@ -1,0 +1,8 @@
+RewriteEngine On
+php_value pcre.backtrack_limit 7000000
+php_value pcre.recursion_limit 7000000
+php_value max_execution_time 0
+php_value memory_limit 512M
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
